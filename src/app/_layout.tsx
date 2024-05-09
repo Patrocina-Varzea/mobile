@@ -1,3 +1,4 @@
+import "../styles/global.css";
 import { Poppins_400Regular, Poppins_500Medium, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import { useFonts } from 'expo-font';
 import { Slot } from 'expo-router';
