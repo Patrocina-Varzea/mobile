@@ -27,7 +27,7 @@ const buttonVariants = cva(
   },
 );
 
-const buttonTextVariants = cva("text-center font-medium", {
+const buttonTextVariants = cva("text-center font-medium font-body", {
   variants: {
     variant: {
       default: "text-gray-900",

@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { router } from "expo-router";
 import { View } from "react-native";
 
 import LogoImg from "@/assets/svg/logo.svg";
@@ -7,7 +8,7 @@ export default function LoginOptions() {
   return (
     <View className="flex-1 items-center justify-center bg-gray-900 p-8">
       <View className="mb-6">
-        <LogoImg width={120} height={120} />
+        <LogoImg width={150} height={150} />
       </View>
       <View className="w-full gap-5">
         <Button
@@ -39,7 +40,7 @@ export default function LoginOptions() {
           size="lg"
         />
         <Button
-          label="ANÚNCIOS"
+          label="ANÚNCIOS - PUBLICAÇÕES"
           testID="login-button-ads"
           variant="secondary"
           labelClasses="secondary"
@@ -51,6 +52,16 @@ export default function LoginOptions() {
           variant="secondary"
           labelClasses="secondary"
           size="lg"
+        />
+        <Button
+          label="PRÊMIOS - SORTEIOS"
+          testID="login-button-award"
+          variant="secondary"
+          labelClasses="secondary"
+          size="lg"
+          onPress={() => {
+            router.navigate("/awards");
+          }}
         />
       </View>
     </View>
