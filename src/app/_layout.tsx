@@ -1,3 +1,4 @@
+import { ToastProvider } from "@/components/Toast";
 import {
   Poppins_400Regular,
   Poppins_500Medium,
@@ -26,15 +27,17 @@ export default function Layout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <StatusBar style="light" hidden={false} />
-      <Stack
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="index" />
-        <Stack.Screen name="awards" />
-      </Stack>
+      <ToastProvider>
+        <StatusBar style="light" hidden={false} />
+        <Stack
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="index" />
+          <Stack.Screen name="awards" />
+        </Stack>
+      </ToastProvider>
     </GestureHandlerRootView>
   );
 }

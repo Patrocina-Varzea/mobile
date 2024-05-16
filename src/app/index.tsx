@@ -16,52 +16,55 @@ export default function LoginOptions() {
           testID="login-button-signup"
           variant="link"
           labelClasses="link"
-          size="lg"
+          className="h-12"
         />
         <Button
           label="CLUBES - TIMES"
           testID="login-button-club"
           variant="secondary"
           labelClasses="secondary"
-          size="lg"
+          className="h-12"
         />
         <Button
           label="PATROCINADOR"
           testID="login-button-sponsor"
           variant="secondary"
           labelClasses="secondary"
-          size="lg"
+          className="h-12"
         />
         <Button
           label="CONFECÇÃO DE UNIFORMES"
           testID="login-button-sonfection"
           variant="secondary"
           labelClasses="secondary"
-          size="lg"
+          className="h-12"
         />
         <Button
           label="ANÚNCIOS - PUBLICAÇÕES"
           testID="login-button-ads"
           variant="secondary"
           labelClasses="secondary"
-          size="lg"
+          className="h-12"
         />
         <Button
           label="DOAÇÕES"
           testID="login-button-donation"
           variant="secondary"
           labelClasses="secondary"
-          size="lg"
+          onPress={() => {
+            router.navigate("/donations");
+          }}
+          className="h-12"
         />
         <Button
           label="PRÊMIOS - SORTEIOS"
           testID="login-button-award"
-          variant="secondary"
+          variant={"secondary"}
           labelClasses="secondary"
-          size="lg"
           onPress={() => {
             router.navigate("/awards");
           }}
+          className="h-12"
         />
       </View>
     </View>

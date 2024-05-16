@@ -7,7 +7,7 @@ import LogoImg from "@/assets/svg/logo.svg";
 
 export default function Awards() {
   return (
-    <View className="flex-1 items-center bg-gray-900 p-8">
+    <View className="flex-1 items-center bg-gray-900 p-8 pt-10">
       <View className="my-3 items-center justify-center">
         <View className="flex flex-row">
           <Link href={"/"}>
