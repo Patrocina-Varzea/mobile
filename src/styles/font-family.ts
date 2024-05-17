@@ -1,5 +1,6 @@
+/* eslint-disable camelcase */
 export const fontFamily = {
-  heading: "Poppins_700Bold",
-  subtitle: "Poppins_500Medium",
-  body: "Poppins_400Regular",
+  heading: "Poppins-Bold",
+  subtitle: "Poppins-Medium",
+  body: "Poppins-Regular",
 };

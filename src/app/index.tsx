@@ -45,6 +45,9 @@ export default function LoginOptions() {
           variant="secondary"
           labelClasses="secondary"
           className="h-12"
+          onPress={() => {
+            router.navigate("/ads");
+          }}
         />
         <Button
           label="DOAÇÕES"

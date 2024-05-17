@@ -1,10 +1,5 @@
 import { ToastProvider } from "@/components/Toast";
-import {
-  Poppins_400Regular,
-  Poppins_500Medium,
-  Poppins_700Bold,
-} from "@expo-google-fonts/poppins";
-import { useFonts } from "expo-font";
+import * as Font from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
@@ -15,10 +10,10 @@ import "../styles/global.css";
 SplashScreen.preventAutoHideAsync();
 
 export default function Layout() {
-  const [fontsLoaded] = useFonts({
-    Poppins_400Regular,
-    Poppins_500Medium,
-    Poppins_700Bold,
+  const [fontsLoaded] = Font.useFonts({
+    "Poppins-Regular": require("../../assets/fonts/Poppins-Regular.ttf"),
+    "Poppins-Medium": require("../../assets/fonts/Poppins-Medium.ttf"),
+    "Poppins-Bold": require("../../assets/fonts/Poppins-Bold.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -36,6 +31,7 @@ export default function Layout() {
         >
           <Stack.Screen name="index" />
           <Stack.Screen name="awards" />
+          <Stack.Screen name="ads" />
         </Stack>
       </ToastProvider>
     </GestureHandlerRootView>
