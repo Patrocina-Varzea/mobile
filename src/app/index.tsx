@@ -4,6 +4,12 @@ import { View } from "react-native";
 
 import LogoImg from "@/assets/svg/logo.svg";
 
+type Params = {
+  club: "club";
+  sponsor: "sponsor";
+  confection: "confection";
+};
+
 export default function LoginOptions() {
   return (
     <View className="flex-1 items-center justify-center bg-gray-900 p-8">
@@ -24,6 +30,9 @@ export default function LoginOptions() {
           variant="secondary"
           labelClasses="secondary"
           className="h-12"
+          onPress={() => {
+            router.navigate("/club-text");
+          }}
         />
         <Button
           label="PATROCINADOR"
@@ -31,6 +40,9 @@ export default function LoginOptions() {
           variant="secondary"
           labelClasses="secondary"
           className="h-12"
+          onPress={() => {
+            router.navigate("/sponsor-text");
+          }}
         />
         <Button
           label="CONFECÇÃO DE UNIFORMES"
@@ -38,6 +50,9 @@ export default function LoginOptions() {
           variant="secondary"
           labelClasses="secondary"
           className="h-12"
+          onPress={() => {
+            router.navigate("/confection-text");
+          }}
         />
         <Button
           label="ANÚNCIOS - PUBLICAÇÕES"

@@ -15,7 +15,7 @@ const buttonVariants = cva(
         link: "bg-transparent border border-yellow-400",
       },
       size: {
-        default: "h-10 px-4",
+        default: "h-10 px-3",
         sm: "h-8 px-2",
         lg: "h-12 px-8",
       },
