@@ -13,7 +13,7 @@ export default function SponsorText() {
           <View className="flex-1 items-center justify-center pl-8">
             <LogoImg width={36} height={36} />
           </View>
-          <Link href={"/"}>
+          <Link href={"/signin"}>
             <SquareArrowRight
               color={colors.yellow[400]}
               width={32}

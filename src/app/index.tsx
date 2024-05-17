@@ -64,7 +64,7 @@ export default function LoginOptions() {
           labelClasses="secondary"
           className="h-12"
           onPress={() => {
-            router.navigate("/");
+            router.navigate("/signin");
           }}
         />
         <Button
