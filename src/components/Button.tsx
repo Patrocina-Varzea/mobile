@@ -4,7 +4,7 @@ import { Text, TouchableOpacity } from "react-native";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "flex flex-row items-center justify-center rounded-md",
+  "flex flex-row items-center justify-center rounded-md w-full",
   {
     variants: {
       variant: {

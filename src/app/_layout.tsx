@@ -30,11 +30,13 @@ export default function Layout() {
           }}
         >
           <Stack.Screen name="index" />
-          <Stack.Screen name="awards" />
-          <Stack.Screen name="ads" />
+          <Stack.Screen name="signup" />
           <Stack.Screen name="club-text" />
           <Stack.Screen name="sponsor-text" />
           <Stack.Screen name="confection-text" />
+          <Stack.Screen name="ads" />
+          <Stack.Screen name="donations" />
+          <Stack.Screen name="awards" />
         </Stack>
       </ToastProvider>
     </GestureHandlerRootView>

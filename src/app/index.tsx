@@ -23,6 +23,9 @@ export default function LoginOptions() {
           variant="link"
           labelClasses="link"
           className="h-12"
+          onPress={() => {
+            router.navigate("/signup");
+          }}
         />
         <Button
           label="CLUBES - TIMES"
@@ -46,12 +49,22 @@ export default function LoginOptions() {
         />
         <Button
           label="CONFECÇÃO DE UNIFORMES"
-          testID="login-button-sonfection"
+          testID="login-button-confection"
           variant="secondary"
           labelClasses="secondary"
           className="h-12"
           onPress={() => {
             router.navigate("/confection-text");
+          }}
+        />
+        <Button
+          label="CAMPEONATOS"
+          testID="login-button-championships"
+          variant="secondary"
+          labelClasses="secondary"
+          className="h-12"
+          onPress={() => {
+            router.navigate("/");
           }}
         />
         <Button
@@ -76,7 +89,7 @@ export default function LoginOptions() {
         />
         <Button
           label="PRÊMIOS - SORTEIOS"
-          testID="login-button-award"
+          testID="login-button-awards"
           variant={"secondary"}
           labelClasses="secondary"
           onPress={() => {

@@ -17,6 +17,10 @@ export const colors = {
   white: "#FFFFFF",
   red: {
     500: "#F75A68",
+    600: "#EA4335",
+  },
+  blue: {
+    700: "#1877f2",
   },
   yellow: {
     400: "#facc15",
