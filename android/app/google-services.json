@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "849948842277",
+    "project_id": "patrocina-varzea-27163",
+    "storage_bucket": "patrocina-varzea-27163.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849948842277:android:026ab265c4df36991b22cc",
+        "android_client_info": {
+          "package_name": "com.bllackdev.patrocinavarzea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849948842277-3rfbkp7kf1m7fet06gi8ok2nd1gkklqo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bllackdev.patrocinavarzea",
+            "certificate_hash": "617003fe90814d8b47e77bc85bb52bf31d1d6bd1"
+          }
+        },
+        {
+          "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX563IeKLzST_0S8xc0H6vHYI04d7lbvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849948842277:android:53f3db67434dfb8e1b22cc",
+        "android_client_info": {
+          "package_name": "com.patrocinavarzea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849948842277-a9dvl7n3adauj40n75s8vh2h1u4esmdm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.patrocinavarzea",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX563IeKLzST_0S8xc0H6vHYI04d7lbvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849948842277:android:c5ead42df6dadf191b22cc",
+        "android_client_info": {
+          "package_name": "com.patrocinavarzeamobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX563IeKLzST_0S8xc0H6vHYI04d7lbvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

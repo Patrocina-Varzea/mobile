@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
+    "@react-native-firebase/app": "^20.0.0",
+    "@react-native-firebase/auth": "^20.0.0",
+    "@react-native-google-signin/google-signin": "^12.1.0",
     "@react-navigation/native": "^6.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

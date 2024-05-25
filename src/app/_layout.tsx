@@ -1,4 +1,5 @@
 import { ToastProvider } from "@/components/Toast";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -6,9 +7,15 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "react-native-reanimated";
+
 import "../styles/global.css";
 
 SplashScreen.preventAutoHideAsync();
+
+GoogleSignin.configure({
+  webClientId:
+    "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+});
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({

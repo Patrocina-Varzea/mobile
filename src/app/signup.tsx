@@ -2,6 +2,11 @@ import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 import { RadioGroup, RadioGroupItem } from "@/components/RadioGroup";
 import { colors } from "@/styles/colors";
+import {
+  GoogleSignin,
+  isErrorWithCode,
+  statusCodes,
+} from "@react-native-google-signin/google-signin";
 import { Link } from "expo-router";
 import { SquareArrowLeft } from "lucide-react-native";
 import { ScrollView, Text, View } from "react-native";
@@ -9,6 +14,33 @@ import { ScrollView, Text, View } from "react-native";
 import LogoImg from "@/assets/svg/logo.svg";
 
 export default function Signup() {
+  async function handleGoogleSignIn() {
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      console.log(userInfo);
+    } catch (error) {
+      console.log(error);
+      if (isErrorWithCode(error)) {
+        switch (error.code) {
+          case statusCodes.SIGN_IN_CANCELLED:
+            // user cancelled the login flow
+            break;
+          case statusCodes.IN_PROGRESS:
+            // operation (eg. sign in) already in progress
+            break;
+          case statusCodes.PLAY_SERVICES_NOT_AVAILABLE:
+            // play services not available or outdated
+            break;
+          default:
+          // some other error happened
+        }
+      } else {
+        // an error that's not related to google sign in occurred
+      }
+    }
+  }
+
   return (
     <View className="flex-1 items-center bg-gray-900 p-8 pt-10">
       <View className="my-3 items-center justify-center">
@@ -67,6 +99,9 @@ export default function Signup() {
             label="Criar com Google"
             className="bg-red-600"
             labelClasses="text-white"
+            onPress={() => {
+              handleGoogleSignIn();
+            }}
           />
           <Button
             label="Criar com Facebook"
