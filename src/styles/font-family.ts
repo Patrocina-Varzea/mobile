@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 export const fontFamily = {
   heading: "Poppins-Bold",
   subtitle: "Poppins-Medium",

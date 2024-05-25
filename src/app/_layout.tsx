@@ -1,25 +1,40 @@
 import { ToastProvider } from "@/components/Toast";
-import * as Font from "expo-font";
+import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "react-native-reanimated";
 import "../styles/global.css";
 
 SplashScreen.preventAutoHideAsync();
 
-export default function Layout() {
-  const [fontsLoaded] = Font.useFonts({
+export default function RootLayout() {
+  const [loaded, error] = useFonts({
     "Poppins-Regular": require("../../assets/fonts/Poppins-Regular.ttf"),
     "Poppins-Medium": require("../../assets/fonts/Poppins-Medium.ttf"),
     "Poppins-Bold": require("../../assets/fonts/Poppins-Bold.ttf"),
   });
 
-  if (!fontsLoaded) {
-    SplashScreen.hideAsync();
+  useEffect(() => {
+    if (error) throw error;
+  }, [error]);
+
+  useEffect(() => {
+    if (loaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded]);
+
+  if (!loaded) {
+    return null;
   }
 
+  return <RootLayoutNav />;
+}
+
+function RootLayoutNav() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ToastProvider>
