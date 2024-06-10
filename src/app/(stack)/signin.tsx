@@ -6,8 +6,10 @@ import { SquareArrowLeft } from "lucide-react-native";
 import { ScrollView, Text, View } from "react-native";
 
 import LogoImg from "@/assets/svg/logo.svg";
+import { useAuth } from "@/context/auth";
 
 export default function Signin() {
+  const { signInGoogle } = useAuth();
   return (
     <View className="flex-1 items-center bg-gray-900 p-8 pt-10">
       <View className="my-3 items-center justify-center">
@@ -54,11 +56,9 @@ export default function Signin() {
             label="Acessar com Google"
             className="bg-red-600"
             labelClasses="text-white"
-          />
-          <Button
-            label="Acessar com Facebook"
-            className="bg-blue-700"
-            labelClasses="text-white"
+            onPress={() => {
+              signInGoogle();
+            }}
           />
         </View>
       </ScrollView>

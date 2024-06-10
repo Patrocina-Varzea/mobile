@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 import { cn } from "@/lib/utils";
 
@@ -53,6 +53,7 @@ interface ButtonProps
     VariantProps<typeof buttonVariants> {
   label: string;
   labelClasses?: string;
+  icon?: React.ReactNode;
 }
 function Button({
   label,
@@ -60,6 +61,7 @@ function Button({
   className,
   variant,
   size,
+  icon,
   ...props
 }: ButtonProps) {
   return (
@@ -67,6 +69,10 @@ function Button({
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
+      {!!icon && (
+        <View className="mr-3 items-center justify-center">{icon}</View>
+      )}
+
       <Text
         className={cn(
           buttonTextVariants({ variant, size, className: labelClasses }),

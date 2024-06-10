@@ -12,7 +12,7 @@ type Params = {
 
 export default function LoginOptions() {
   return (
-    <View className="flex-1 items-center justify-center bg-gray-900 p-8">
+    <View className="flex-1 items-center justify-center bg-gray-800 p-8">
       <View className="mb-6">
         <LogoImg width={150} height={150} />
       </View>

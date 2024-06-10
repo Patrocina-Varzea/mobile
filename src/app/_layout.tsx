@@ -1,4 +1,6 @@
-import { ToastProvider } from "@/components/Toast";
+import "react-native-reanimated";
+import "../styles/global.css";
+
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
@@ -6,15 +8,15 @@ import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import "react-native-reanimated";
 
-import "../styles/global.css";
+import { AuthProvider } from "@/context/auth";
+
+import { ToastProvider } from "@/components/Toast";
 
 SplashScreen.preventAutoHideAsync();
 
 GoogleSignin.configure({
-  webClientId:
-    "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
+  webClientId: process.env.EXPO_PUBLIC_WEB_CLIENT_ID,
 });
 
 export default function RootLayout() {
@@ -46,20 +48,15 @@ function RootLayoutNav() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ToastProvider>
         <StatusBar style="light" hidden={false} />
-        <Stack
-          screenOptions={{
-            headerShown: false,
-          }}
-        >
-          <Stack.Screen name="index" />
-          <Stack.Screen name="signup" />
-          <Stack.Screen name="club-text" />
-          <Stack.Screen name="sponsor-text" />
-          <Stack.Screen name="confection-text" />
-          <Stack.Screen name="ads" />
-          <Stack.Screen name="donations" />
-          <Stack.Screen name="awards" />
-        </Stack>
+        <AuthProvider>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+            }}
+          >
+            <Stack.Screen name="(tabs)" />
+          </Stack>
+        </AuthProvider>
       </ToastProvider>
     </GestureHandlerRootView>
   );
