@@ -37,6 +37,13 @@
             {
               "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "849948842277-2d5ngq5atb3bkqeg81nvkt6s17tfvh6a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.patrocinavarzea"
+              }
             }
           ]
         }
@@ -74,35 +81,13 @@
             {
               "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
               "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:849948842277:android:c5ead42df6dadf191b22cc",
-        "android_client_info": {
-          "package_name": "com.patrocinavarzeamobile"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDX563IeKLzST_0S8xc0H6vHYI04d7lbvM"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
+            },
             {
-              "client_id": "849948842277-cvqdrlmoquqpcb06q43flap0pr2qj183.apps.googleusercontent.com",
-              "client_type": 3
+              "client_id": "849948842277-2d5ngq5atb3bkqeg81nvkt6s17tfvh6a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.patrocinavarzea"
+              }
             }
           ]
         }
