@@ -1,9 +1,12 @@
+import { useAuth } from "@/context/auth";
 import { colors } from "@/styles/colors";
 import { Power } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
 
 export default function Header() {
+  const { signOut } = useAuth();
+
   return (
     <View className="mb-3 flex w-full flex-row items-center justify-between bg-gray-800 p-5 px-8">
       <View className="flex flex-row items-center gap-3">
@@ -21,7 +24,11 @@ export default function Header() {
         </View>
       </View>
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            signOut();
+          }}
+        >
           <Power color={colors.yellow[400]} />
         </TouchableOpacity>
       </View>

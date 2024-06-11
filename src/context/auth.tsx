@@ -57,7 +57,7 @@ function AuthProvider({ children }: AuthProviderProps) {
       .signOut()
       .then(() => {
         setUser(null);
-        router.navigate("(auth)");
+        router.navigate("(stack)");
       })
       .catch((error) => {
         const errorCode = error.code;
