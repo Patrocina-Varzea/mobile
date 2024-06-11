@@ -1,5 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs";
-import { Text, View } from "react-native";
+import { colors } from "@/styles/colors";
+import { FilePenLine } from "lucide-react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function TabsInformation() {
   return (
@@ -37,6 +39,19 @@ export default function TabsInformation() {
           <Text className="font-body text-base text-white">
             (11) 98999-5566
           </Text>
+        </View>
+        <View className="mt-2 items-center justify-center">
+          <TouchableOpacity
+            style={{
+              borderWidth: 1,
+              borderColor: colors.yellow[400],
+              borderRadius: 6,
+              padding: 4,
+            }}
+            onPress={() => {}}
+          >
+            <FilePenLine color={colors.yellow[400]} strokeWidth={1.5} />
+          </TouchableOpacity>
         </View>
       </TabsContent>
       <TabsContent value="address" className="gap-4">

@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-yellow-400",
         secondary: "bg-transparent border border-white",
-        destructive: "bg-destructive",
+        destructive: "bg-red-600",
         ghost: "bg-slate-700",
         link: "bg-transparent border border-yellow-400",
       },
@@ -32,7 +32,7 @@ const buttonTextVariants = cva("text-center font-medium font-body", {
     variant: {
       default: "text-gray-900",
       secondary: "text-white",
-      destructive: "text-destructive-foreground",
+      destructive: "text-white",
       ghost: "text-primary-foreground",
       link: "text-yellow-400",
     },

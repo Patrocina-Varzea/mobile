@@ -1,12 +1,13 @@
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
+import { useAuth } from "@/context/auth";
 import { colors } from "@/styles/colors";
 import { Link } from "expo-router";
-import { SquareArrowLeft } from "lucide-react-native";
+import { LogIn, SquareArrowLeft } from "lucide-react-native";
 import { ScrollView, Text, View } from "react-native";
 
+import GoogleIcon from "@/assets/svg/logo-google.svg";
 import LogoImg from "@/assets/svg/logo.svg";
-import { useAuth } from "@/context/auth";
 
 export default function Signin() {
   const { signInGoogle } = useAuth();
@@ -42,7 +43,13 @@ export default function Signin() {
           <Input placeholder="E-mail" />
           <Input placeholder="Senha" />
 
-          <Button label="Acessar conta" />
+          <Button
+            label="Acessar conta"
+            icon={
+              <LogIn strokeWidth={1.5} size={18} color={colors.gray[800]} />
+            }
+            onPress={() => {}}
+          />
 
           <View className="my-4 flex flex-row items-center justify-center gap-3">
             <View className="h-0.5 w-36 bg-gray-300" />
@@ -54,8 +61,8 @@ export default function Signin() {
 
           <Button
             label="Acessar com Google"
-            className="bg-red-600"
-            labelClasses="text-white"
+            variant="destructive"
+            icon={<GoogleIcon width={18} height={18} />}
             onPress={() => {
               signInGoogle();
             }}

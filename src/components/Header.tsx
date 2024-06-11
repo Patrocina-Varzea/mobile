@@ -1,6 +1,6 @@
 import { useAuth } from "@/context/auth";
 import { colors } from "@/styles/colors";
-import { Power } from "lucide-react-native";
+import { Menu } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
 
@@ -24,12 +24,8 @@ export default function Header() {
         </View>
       </View>
       <View>
-        <TouchableOpacity
-          onPress={() => {
-            signOut();
-          }}
-        >
-          <Power color={colors.yellow[400]} />
+        <TouchableOpacity onPress={() => {}}>
+          <Menu color={colors.yellow[400]} />
         </TouchableOpacity>
       </View>
     </View>

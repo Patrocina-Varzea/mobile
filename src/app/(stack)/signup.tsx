@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import auth from "@react-native-firebase/auth";
 import firestore from "@react-native-firebase/firestore";
 import { Link, router } from "expo-router";
-import { SquareArrowLeft } from "lucide-react-native";
+import { LogIn, SquareArrowLeft, UserRoundPlus } from "lucide-react-native";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { ScrollView, Text, View } from "react-native";
@@ -17,6 +17,7 @@ import { useToast } from "@/components/Toast";
 
 import { UserSignUpDTO } from "@/dtos/UserDTO";
 
+import GoogleIcon from "@/assets/svg/logo-google.svg";
 import LogoImg from "@/assets/svg/logo.svg";
 
 const signUpSchema = yup.object({
@@ -209,7 +210,17 @@ export default function Signup() {
             )}
           />
 
-          <Button label="Criar conta" onPress={handleSubmit(handleSignUp)} />
+          <Button
+            label="Criar conta"
+            icon={
+              <UserRoundPlus
+                strokeWidth={1.5}
+                size={18}
+                color={colors.gray[800]}
+              />
+            }
+            onPress={handleSubmit(handleSignUp)}
+          />
 
           <View className="my-4 flex flex-row items-center justify-center gap-3">
             <View className="h-0.5 w-36 bg-gray-300" />
@@ -221,13 +232,16 @@ export default function Signup() {
 
           <Button
             label="Faça login da conta"
+            icon={
+              <LogIn strokeWidth={1.5} size={18} color={colors.gray[800]} />
+            }
             onPress={() => router.navigate("/signin")}
           />
 
           <Button
             label="Criar com Google"
-            className="bg-red-600"
-            labelClasses="text-white"
+            variant="destructive"
+            icon={<GoogleIcon width={18} height={18} />}
             onPress={() => {
               signInGoogle();
             }}
