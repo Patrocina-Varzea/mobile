@@ -1,9 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/Avatar";
-import { Button } from "@/components/Button";
+import SignOut from "@/components/SignOut";
 import TabsInformation from "@/components/TabsInformation";
 import { useAuth } from "@/context/auth";
-import { colors } from "@/styles/colors";
-import { Power } from "lucide-react-native";
 import { View } from "react-native";
 
 export default function Profile() {
@@ -22,14 +20,7 @@ export default function Profile() {
           <TabsInformation />
         </View>
       </View>
-      <Button
-        label="Desconectar"
-        variant="destructive"
-        icon={<Power color={colors.white} size={18} />}
-        onPress={() => {
-          signOut();
-        }}
-      />
+      <SignOut />
     </View>
   );
 }

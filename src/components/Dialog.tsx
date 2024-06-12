@@ -1,7 +1,7 @@
 import { cloneElement, createContext, useContext, useState } from "react";
 import { Modal, TouchableOpacity, View } from "react-native";
 
-import { cn } from "../lib/utils";
+import { cn } from "@/lib/utils";
 
 interface DialogContextType {
   open: boolean;
@@ -46,10 +46,10 @@ function DialogContent({
         className="h-full w-full"
         onPress={() => setOpen(false)}
       >
-        <View className="flex flex-1 items-center justify-center bg-gray-900/75">
+        <View className="flex flex-1 items-center justify-center bg-gray-900/85">
           <TouchableOpacity
             className={cn(
-              "border-border rounded-lg border bg-gray-300 p-6 shadow-lg",
+              "border-border rounded-lg border border-yellow-400 bg-gray-800 p-6",
               className,
             )}
             activeOpacity={1}

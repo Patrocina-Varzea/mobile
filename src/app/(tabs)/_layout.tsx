@@ -8,7 +8,6 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarShowLabel: false,
         tabBarActiveTintColor: colors.yellow[400],
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
@@ -29,29 +28,37 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          tabBarIcon: ({ color, size }) => <Home color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => (
+            <Home color={color} size={size} strokeWidth={1.5} />
+          ),
+          tabBarLabel: "Início",
         }}
       />
       <Tabs.Screen
         name="championships"
         options={{
-          tabBarIcon: ({ color, size }) => <Trophy color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => (
+            <Trophy color={color} size={size} strokeWidth={1.5} />
+          ),
+          tabBarLabel: "Campeonatos",
         }}
       />
       <Tabs.Screen
         name="donations"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <HandCoins color={color} size={size} />
+            <HandCoins color={color} size={size} strokeWidth={1.5} />
           ),
+          tabBarLabel: "Doções",
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <UserRound color={color} size={size} />
+            <UserRound color={color} size={size} strokeWidth={1.5} />
           ),
+          tabBarLabel: "Perfil",
         }}
       />
     </Tabs>
