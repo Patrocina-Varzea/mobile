@@ -235,7 +235,7 @@ export default function Signup() {
             icon={
               <LogIn strokeWidth={1.5} size={18} color={colors.gray[800]} />
             }
-            onPress={() => router.navigate("/signin")}
+            onPress={() => router.navigate("/login-options")}
           />
 
           <Button

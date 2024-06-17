@@ -15,7 +15,7 @@ export default function Signin() {
     <View className="flex-1 items-center bg-gray-900 p-8 pt-10">
       <View className="my-3 items-center justify-center">
         <View className="flex flex-row">
-          <Link href={"/"}>
+          <Link href={"/login-options"}>
             <SquareArrowLeft
               color={colors.yellow[400]}
               width={32}

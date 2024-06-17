@@ -9,6 +9,8 @@ export default function StackLayout() {
     >
       <Stack.Screen name="index" />
       <Stack.Screen name="signup" />
+      <Stack.Screen name="signin" />
+      <Stack.Screen name="login-options" />
       <Stack.Screen name="club-text" />
       <Stack.Screen name="sponsor-text" />
       <Stack.Screen name="confection-text" />
