@@ -4,7 +4,11 @@ import { Menu } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
 
-export default function Header() {
+type Props = {
+  user: string;
+};
+
+export default function Header({ user }: Props) {
   const { signOut } = useAuth();
 
   return (
@@ -18,9 +22,7 @@ export default function Header() {
         </Avatar>
         <View className="items-start">
           <Text className="text-center font-body text-white">Olá,</Text>
-          <Text className="text-center font-subtitle text-white">
-            Raphael Renato
-          </Text>
+          <Text className="text-center font-subtitle text-white">{user}</Text>
         </View>
       </View>
       <View>

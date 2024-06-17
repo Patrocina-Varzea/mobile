@@ -2,28 +2,45 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs";
 import { colors } from "@/styles/colors";
 import { FilePenLine } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
+import InfoChampionshiop from "./InfoChampionship";
+import InfoClub from "./InfoClub";
 
-export default function TabsInformation() {
+type Props = {
+  type?: "club" | "sponsor" | "confection" | "championship";
+};
+
+export default function TabsInformation({ type }: Props) {
+  const isChampionship = type === "championship" ? true : false;
   return (
     <Tabs defaultValue="personal">
       <TabsList>
-        <TabsTrigger id="personal" title="Infos. Pessoais" value="personal" />
+        <TabsTrigger
+          id="personal"
+          title={isChampionship ? "Infos. Organizador" : "Infos. Pessoais"}
+          value="personal"
+        />
         <TabsTrigger id="address" title="Endereço" value="address" />
         <TabsTrigger id="general" title="Infos. Gerais" value="general" />
       </TabsList>
       <TabsContent value="personal" className="gap-4">
-        <View className="flex flex-row gap-2">
-          <Text className="font-subtitle text-base text-white">Nome:</Text>
-          <Text className="line-clamp-2 font-body text-base text-white">
-            Raphael Renato Medeiros da Matta
-          </Text>
-        </View>
-        <View className="flex flex-row gap-2">
-          <Text className="font-subtitle text-base text-white">
-            CPF / CNPJ:
-          </Text>
-          <Text className="font-body text-base text-white">282.253.320-24</Text>
-        </View>
+        {!isChampionship && (
+          <>
+            <View className="flex flex-row gap-2">
+              <Text className="font-subtitle text-base text-white">Nome:</Text>
+              <Text className="line-clamp-2 font-body text-base text-white">
+                Raphael Renato Medeiros da Matta
+              </Text>
+            </View>
+            <View className="flex flex-row gap-2">
+              <Text className="font-subtitle text-base text-white">
+                CPF / CNPJ:
+              </Text>
+              <Text className="font-body text-base text-white">
+                282.253.320-24
+              </Text>
+            </View>
+          </>
+        )}
         <View className="flex flex-row gap-2">
           <Text className="font-subtitle text-base text-white">E-mail:</Text>
           <Text className="font-body text-base text-white">
@@ -95,30 +112,8 @@ export default function TabsInformation() {
         </View>
       </TabsContent>
       <TabsContent value="general" className="gap-4">
-        <View className="flex flex-row gap-2">
-          <Text className="font-subtitle text-base text-white">
-            Deseja patrocinar?
-          </Text>
-          <Text className="line-clamp-2 font-body text-base text-white">
-            SIM
-          </Text>
-        </View>
-        <View className="flex flex-row gap-2">
-          <Text className="font-subtitle text-base text-white">
-            Categoria(s):
-          </Text>
-          <Text className="line-clamp-2 font-body text-base text-white">
-            Sport
-          </Text>
-        </View>
-        <View className="flex flex-row gap-2">
-          <Text className="font-subtitle text-base text-white">
-            Tipo de patrocínio:
-          </Text>
-          <Text className="line-clamp-2 font-body text-base text-white">
-            Manga Frente Costas Troféu
-          </Text>
-        </View>
+        {type === "club" && <InfoClub />}
+        {type === "championship" && <InfoChampionshiop />}
       </TabsContent>
     </Tabs>
   );

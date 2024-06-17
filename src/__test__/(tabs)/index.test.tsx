@@ -1,4 +1,4 @@
-import Home from "@/app/(tabs)";
+import Home from "@/app/(club)";
 import { render } from "@testing-library/react-native";
 
 describe("Home", () => {

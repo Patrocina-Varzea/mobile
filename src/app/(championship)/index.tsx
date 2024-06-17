@@ -7,7 +7,7 @@ import LogoImg from "@/assets/svg/logo.svg";
 export default function Home() {
   return (
     <View className="flex-1 items-center justify-center bg-gray-900 pt-10">
-      <Header user="Raphael Teste" />
+      <Header user="Raphael Campeonato" />
       <View className="flex-1 px-8 pb-24">
         <TabsInformation type="championship" />
         <View className="mb-6 flex-1 items-center justify-center">

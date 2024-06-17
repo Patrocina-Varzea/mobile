@@ -1,10 +1,10 @@
 import { colors } from "@/styles/colors";
+import { router } from "expo-router";
 import { MousePointerClick, ReceiptText } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
 import { Dialog, DialogContent, DialogTrigger } from "./Dialog";
 
 import InstagramIcon from "@/assets/svg/instagram.svg";
-import { router } from "expo-router";
 
 type Props = {
   name?: string;
