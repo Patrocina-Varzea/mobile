@@ -5,6 +5,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs";
 import InfoChampionshiop from "./InfoChampionship";
 import InfoClub from "./InfoClub";
+import InfoConfection from "./InfoConfection";
 import InfoSponsor from "./InfoSponsor";
 
 type Props = {
@@ -117,6 +118,7 @@ export default function TabsInformation({ type }: Props) {
         {type === "club" && <InfoClub />}
         {type === "championship" && <InfoChampionshiop />}
         {type === "sponsor" && <InfoSponsor />}
+        {type === "confection" && <InfoConfection />}
       </TabsContent>
     </Tabs>
   );
