@@ -1,9 +1,11 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs";
 import { colors } from "@/styles/colors";
 import { FilePenLine } from "lucide-react-native";
 import { Text, TouchableOpacity, View } from "react-native";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs";
 import InfoChampionshiop from "./InfoChampionship";
 import InfoClub from "./InfoClub";
+import InfoSponsor from "./InfoSponsor";
 
 type Props = {
   type?: "club" | "sponsor" | "confection" | "championship";
@@ -114,6 +116,7 @@ export default function TabsInformation({ type }: Props) {
       <TabsContent value="general" className="gap-4">
         {type === "club" && <InfoClub />}
         {type === "championship" && <InfoChampionshiop />}
+        {type === "sponsor" && <InfoSponsor />}
       </TabsContent>
     </Tabs>
   );

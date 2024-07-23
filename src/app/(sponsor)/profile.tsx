@@ -15,7 +15,7 @@ export default function Profile() {
           <AvatarFallback textClassname="text-gray-300">RR</AvatarFallback>
         </Avatar>
         <View className="mt-8 items-center">
-          <TabsInformation />
+          <TabsInformation type="sponsor" />
         </View>
       </View>
       <SignOut />

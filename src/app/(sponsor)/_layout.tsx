@@ -1,6 +1,12 @@
 import { colors } from "@/styles/colors";
 import { Tabs } from "expo-router";
-import { HandCoins, Home, Trophy, UserRound } from "lucide-react-native";
+import {
+  HandCoins,
+  Home,
+  ShieldHalf,
+  Trophy,
+  UserRound,
+} from "lucide-react-native";
 import { Platform } from "react-native";
 
 export default function TabLayout() {
@@ -32,6 +38,15 @@ export default function TabLayout() {
             <Home color={color} size={size} strokeWidth={1.5} />
           ),
           tabBarLabel: "Início",
+        }}
+      />
+      <Tabs.Screen
+        name="clubs-list"
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <ShieldHalf color={color} size={size} strokeWidth={1.5} />
+          ),
+          tabBarLabel: "Clubes-Times",
         }}
       />
       <Tabs.Screen
